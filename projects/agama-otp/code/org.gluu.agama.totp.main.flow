@@ -18,3 +18,8 @@ When userTOTPSecretKey is null
 When userTOTPSecretKey is not null
      checkOTPValid | E = Trigger org.gluu.agama.totp.otp userId userTOTPSecretKey
      Log "@info checkOTPValid check otp " checkOTPValid E
+When checkOTPValid is true
+     it_fqozm = {success:true, data: { userId: userId }}
+     Finish it_fqozm
+it_wutoi = {success:false, error: "login failed"}
+Finish it_wutoi
