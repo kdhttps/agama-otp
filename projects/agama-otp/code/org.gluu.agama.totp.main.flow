@@ -1,25 +1,25 @@
 Flow org.gluu.agama.totp.main
      Basepath ""
 // user authn
-Log "@info user authn"
+Log "@debug user authn"
 // Username password login
 user | E = Trigger org.gluu.agama.totp.pw 
-Log "@info user details " user
+Log "@debug user details " user
 userId = user.data.userId
-Log "@info user id " userId
+Log "@debug user id " userId
 userTOTPSecretKey | E = Call org.gluu.agama.totp.IdentityProcessor#getUserTOTPSecretKey userId
-Log "@info user TOTP secret key from flow " userTOTPSecretKey
+Log "@debug user TOTP secret key from flow " userTOTPSecretKey
 checkOTPValid = null
 // if no enrollment exist
 When userTOTPSecretKey is null
      checkOTPValid | E = Trigger org.gluu.agama.totp.enroll userId
-     Log "@info checkOTPValid enroll " checkOTPValid.success E
+     Log "@debug checkOTPValid enroll " checkOTPValid.success E
 // if user is already enrolled
 When userTOTPSecretKey is not null
      checkOTPValid | E = Trigger org.gluu.agama.totp.otp userId userTOTPSecretKey
-     Log "@info checkOTPValid check otp " checkOTPValid.success E
+     Log "@debug checkOTPValid check otp " checkOTPValid.success E
 When checkOTPValid.success is true
-     it_hmhlm = {success:true, data: { userId: userId }}
-     Finish it_hmhlm
-it_lqkcn = {success:false, error: "login failed"}
-Finish it_lqkcn
+     it_yhxhy = {success:true, data: { userId: userId }}
+     Finish it_yhxhy
+it_epwlh = {success:false, error: "login failed"}
+Finish it_epwlh
