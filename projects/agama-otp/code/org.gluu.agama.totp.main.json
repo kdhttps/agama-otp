@@ -130,7 +130,7 @@
 				],
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 3111,
 				"y": 197
@@ -688,7 +688,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "false",
+							"assignmentExpression": "null",
 							"assignedVariableName": "checkOTPValid"
 						}
 					],
@@ -696,7 +696,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 1755,
 				"y": 168
@@ -1100,8 +1100,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2261,
-		"y": -111,
+		"x": -1456,
+		"y": -30,
 		"zoom": 1
 	}
 }
