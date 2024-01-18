@@ -23,7 +23,8 @@
             "org.gluu.agama.pw": {},
             "org.gluu.agama.otp.enroll": {},
             "": {},
-            "org.gluu.agama.totp.enroll": {}
+            "org.gluu.agama.totp.enroll": {},
+            "org.gluu.agama.totp.main": {}
         },
         "name": "agama-otp"
     }
