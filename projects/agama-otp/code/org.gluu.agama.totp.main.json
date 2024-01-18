@@ -72,18 +72,18 @@
 					"id": "Agama-log-Node-16203684-77dd-42fe-9f40-783cb4047118",
 					"parentId": "Agama-trigger-Node-8c3bb0a9-9b1f-4b34-9039-dd6e3463545d",
 					"type": "Agama-log-Node",
-					"displayName": "log enrollData",
+					"displayName": "log checkOTPValid",
 					"hasComment": true,
 					"comment": "",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"logMessage": "\"enroll \" enrollData E",
+					"logMessage": "\"checkOTPValid enroll \" checkOTPValid E",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2188,
@@ -123,7 +123,7 @@
 					"arguments": [
 						"userId"
 					],
-					"asssignedVariableName": "enrollData",
+					"asssignedVariableName": "checkOTPValid",
 					"exceptionVariableField": "E"
 				},
 				"skake": false
@@ -299,7 +299,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 472,
@@ -514,7 +514,7 @@
 						{
 							"variableTypeCheck": false,
 							"assignmentExpression": "false",
-							"assignedVariableName": "enrollData"
+							"assignedVariableName": "checkOTPValid"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
@@ -557,7 +557,7 @@
 					"valueField": "null",
 					"comment": "if no enrollment exist",
 					"hasComment": true,
-					"inRepeatBlock": false,
+					"inRepeatBlock": "",
 					"position": {
 						"x": 1960
 					},
@@ -788,8 +788,8 @@
 		}
 	],
 	"viewport": {
-		"x": -279,
-		"y": -6,
+		"x": -1581,
+		"y": -109,
 		"zoom": 1
 	}
 }
