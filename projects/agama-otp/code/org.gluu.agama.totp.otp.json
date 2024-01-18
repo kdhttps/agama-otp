@@ -69,7 +69,7 @@
 					"comment": "otp enrollment",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"logMessage": "\"otp enrollment for user \" userId",
+					"logMessage": "\"otp enrollment for user \" userId secretKey",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"hasSuccess": "",
@@ -79,7 +79,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 273,
@@ -111,7 +111,7 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "userId",
+					"inputs": "userId secretKey",
 					"configs": "",
 					"flowname": "org.gluu.agama.totp.otp"
 				},
@@ -151,16 +151,16 @@
 					"id": "Agama-rrf-Node-2fb5c7e5-ecbf-4c82-8e15-822c5105d11a",
 					"parentId": "Agama-log-Node-dc952936-0fc5-48dd-b663-a6eb20014b90",
 					"type": "Agama-rrf-Node",
-					"displayName": "load enroll page",
+					"displayName": "load otp login page",
 					"hasComment": true,
 					"comment": "",
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
-					"templatePath": "enroll.ftlh",
+					"templatePath": "otplogin.ftlh",
 					"asssignedVariableName": "scanCode",
-					"arguments": "obj",
+					"arguments": "",
 					"position": {
 						"x": 1023
 					}
