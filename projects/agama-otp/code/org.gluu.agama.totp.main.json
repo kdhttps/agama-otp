@@ -166,12 +166,12 @@
 					"whenCondition": "",
 					"inRepeatBlock": "",
 					"logMessage": "\"checkOTPValid check otp \" checkOTPValid.success E",
-					"logLevel": "info",
+					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2886,
@@ -253,7 +253,7 @@
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"logMessage": "\"checkOTPValid enroll \" checkOTPValid.success E",
-					"logLevel": "info",
+					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
@@ -339,7 +339,7 @@
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"logMessage": "\"user id \" userId",
-					"logLevel": "info",
+					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
@@ -426,7 +426,7 @@
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"logMessage": "\"user details \" user",
-					"logLevel": "info",
+					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
@@ -510,7 +510,7 @@
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"logMessage": "\"user authn\"",
-					"logLevel": "info",
+					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
@@ -641,7 +641,7 @@
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"logMessage": "\"user TOTP secret key from flow \" userTOTPSecretKey",
-					"logLevel": "info",
+					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16",
 					"hasSuccess": "",
 					"hasFailure": "",
@@ -696,7 +696,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 1755,
 				"y": 168
@@ -1100,8 +1100,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1456,
-		"y": -30,
-		"zoom": 1
+		"x": -1837.6825447462622,
+		"y": 6.233223235463129,
+		"zoom": 0.8724683680369821
 	}
 }
