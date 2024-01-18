@@ -29,7 +29,7 @@
 					"whenCondition": "",
 					"inRepeatBlock": "",
 					"logMessage": "\"scan code : \" scanCode.code",
-					"logLevel": "info",
+					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
@@ -46,8 +46,8 @@
 			"height": 124,
 			"id": "Agama-log-Node-dc952936-0fc5-48dd-b663-a6eb20014b90",
 			"position": {
-				"x": 273,
-				"y": 76
+				"x": 335.45862810867254,
+				"y": 82.46123739055236
 			},
 			"type": "log",
 			"data": {
@@ -57,8 +57,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 273,
-					"y": 76
+					"x": 335.45862810867254,
+					"y": 82.46123739055236
 				},
 				"agamaData": {
 					"id": "Agama-log-Node-dc952936-0fc5-48dd-b663-a6eb20014b90",
@@ -70,7 +70,7 @@
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"logMessage": "\"otp enrollment for user \" userId secretKey",
-					"logLevel": "info",
+					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16",
 					"hasSuccess": "",
 					"hasFailure": "",
@@ -79,11 +79,11 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 273,
-				"y": 76
+				"x": 335.45862810867254,
+				"y": 82.46123739055236
 			}
 		},
 		{
@@ -255,12 +255,12 @@
 					"whenCondition": "",
 					"inRepeatBlock": "",
 					"logMessage": "\"otp check result \" otpCheck",
-					"logLevel": "info",
+					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1336,
@@ -536,8 +536,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 15,
-		"zoom": 1
+		"x": -353.7981835357027,
+		"y": 279.45913147644944,
+		"zoom": 0.9286146967410981
 	}
 }
