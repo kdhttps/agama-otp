@@ -3,6 +3,46 @@
 		{
 			"width": 170,
 			"height": 124,
+			"id": "Agama-log-Node-a2d8e474-a1c6-4bbd-8ff7-0132e5a500f4",
+			"position": {
+				"x": 2886,
+				"y": 400
+			},
+			"type": "log",
+			"data": {
+				"id": "Agama-log-Node-a2d8e474-a1c6-4bbd-8ff7-0132e5a500f4",
+				"type": "Agama-log-Node",
+				"parentId": "Agama-trigger-Node-030c7c0d-f0cc-44f3-ba67-ca99c7a01793",
+				"whenCondition": "",
+				"inRepeatBlock": "",
+				"position": {
+					"x": 2886,
+					"y": 400
+				},
+				"agamaData": {
+					"id": "Agama-log-Node-a2d8e474-a1c6-4bbd-8ff7-0132e5a500f4",
+					"parentId": "Agama-trigger-Node-030c7c0d-f0cc-44f3-ba67-ca99c7a01793",
+					"type": "Agama-log-Node",
+					"displayName": "log otp check",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": "",
+					"logMessage": "\"checkOTPValid check otp \" checkOTPValid E",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16"
+				}
+			},
+			"selected": false,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 2886,
+				"y": 400
+			}
+		},
+		{
+			"width": 170,
+			"height": 124,
 			"id": "Agama-trigger-Node-030c7c0d-f0cc-44f3-ba67-ca99c7a01793",
 			"position": {
 				"x": 2686,
@@ -36,7 +76,8 @@
 					],
 					"asssignedVariableName": "checkOTPValid",
 					"exceptionVariableField": "E"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -50,8 +91,8 @@
 			"height": 124,
 			"id": "Agama-log-Node-16203684-77dd-42fe-9f40-783cb4047118",
 			"position": {
-				"x": 2389,
-				"y": 400
+				"x": 2363,
+				"y": 398
 			},
 			"type": "log",
 			"data": {
@@ -61,8 +102,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 2389,
-					"y": 400
+					"x": 2363,
+					"y": 398
 				},
 				"agamaData": {
 					"id": "Agama-log-Node-16203684-77dd-42fe-9f40-783cb4047118",
@@ -79,11 +120,11 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2389,
-				"y": 400
+				"x": 2363,
+				"y": 398
 			}
 		},
 		{
@@ -598,19 +639,22 @@
 					"id": "Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12",
 					"parentId": "Agama-when-Node-4fa47f26-e1e3-4d4f-b40d-31de2ff74da4",
 					"type": "Agama-when-Node",
-					"hasFailure": true,
+					"hasFailure": "",
 					"variableField": "userTOTPSecretKey",
 					"conditionInputField": "is not",
 					"valueField": "null",
 					"comment": "if user is already enrolled",
 					"hasComment": true,
 					"inRepeatBlock": "",
-					"hasSuccess": true
+					"hasSuccess": "",
+					"hasNoRepeat": false,
+					"hasRepeat": false
 				},
 				"handles": [
 					"Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12.FAILURE",
 					"Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -618,61 +662,6 @@
 				"y": 193
 			},
 			"dragging": false
-		},
-		{
-			"width": 170,
-			"height": 124,
-			"id": "Agama-call-Node-f41f2f21-3820-4208-a14e-aa012de0d4cd",
-			"position": {
-				"x": 2982,
-				"y": 214
-			},
-			"type": "call",
-			"data": {
-				"id": "Agama-call-Node-f41f2f21-3820-4208-a14e-aa012de0d4cd",
-				"type": "Agama-call-Node",
-				"parentId": "Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12",
-				"whenCondition": "",
-				"inRepeatBlock": "",
-				"position": {
-					"x": 2982,
-					"y": 214
-				},
-				"agamaData": {
-					"id": "Agama-call-Node-f41f2f21-3820-4208-a14e-aa012de0d4cd",
-					"parentId": "Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12",
-					"type": "Agama-call-Node",
-					"displayName": "check TOTP",
-					"hasComment": true,
-					"comment": "",
-					"javaClassName": "org.gluu.agama.totp.TOTPUtil",
-					"javaMethodName": "validateTOTP",
-					"javaVariableName": "",
-					"exceptionVariableField": "E",
-					"callType": "Call static method",
-					"whenCondition": "WhenFalse",
-					"inRepeatBlock": "",
-					"arguments": [
-						"otp",
-						"userTOTPSecretKey"
-					],
-					"nodeIcon": "material-symbols:code",
-					"asssignedVariableName": "enrollData",
-					"position": {
-						"x": 2682
-					}
-				},
-				"skake": false
-			},
-			"selected": true,
-			"positionAbsolute": {
-				"x": 2982,
-				"y": 214
-			},
-			"dragging": false,
-			"parentId": "Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12",
-			"whenCondition": "",
-			"inRepeatBlock": ""
 		}
 	],
 	"edges": [
@@ -883,24 +872,6 @@
 			"sourceHandle": "Agama-when-Node-4fa47f26-e1e3-4d4f-b40d-31de2ff74da4.FAILURE"
 		},
 		{
-			"id": "Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12-Agama-call-Node-f41f2f21-3820-4208-a14e-aa012de0d4cd-544449b1-92ef-4944-a8e5-dc28805a8f52",
-			"type": "straight",
-			"source": "Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12",
-			"target": "Agama-call-Node-f41f2f21-3820-4208-a14e-aa012de0d4cd",
-			"label": "",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"labelBgStyle": {
-				"fill": "#FFCC00",
-				"color": "#fff",
-				"fillOpacity": 0.7
-			},
-			"sourceHandle": "Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12.FAILURE"
-		},
-		{
 			"id": "Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12-Agama-trigger-Node-030c7c0d-f0cc-44f3-ba67-ca99c7a01793-5f8f094b-27d9-4828-8ca7-83b79ef0a604",
 			"type": "straight",
 			"source": "Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12",
@@ -917,6 +888,23 @@
 				"fillOpacity": 0.7
 			},
 			"sourceHandle": "Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12.SUCCESS"
+		},
+		{
+			"id": "Agama-trigger-Node-030c7c0d-f0cc-44f3-ba67-ca99c7a01793-Agama-log-Node-a2d8e474-a1c6-4bbd-8ff7-0132e5a500f4-139d3f51-0254-4973-ad51-212b6b8b6dd5",
+			"type": "straight",
+			"source": "Agama-trigger-Node-030c7c0d-f0cc-44f3-ba67-ca99c7a01793",
+			"target": "Agama-log-Node-a2d8e474-a1c6-4bbd-8ff7-0132e5a500f4",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
