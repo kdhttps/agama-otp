@@ -2,9 +2,9 @@ Flow org.gluu.agama.totp.otp
      Basepath ""
      Inputs userId secretKey
 // otp enrollment
-Log "@info otp enrollment for user " userId secretKey
+Log "@debug otp enrollment for user " userId secretKey
 scanCode = RRF "otplogin.ftlh" 
-Log "@info scan code : " scanCode.code
+Log "@debug scan code : " scanCode.code
 otpCheck | E = Call org.gluu.agama.totp.TOTPUtil#validateTOTP scanCode.code secretKey
-Log "@info otp check result " otpCheck
+Log "@debug otp check result " otpCheck
 Finish otpCheck
