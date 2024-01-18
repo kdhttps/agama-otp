@@ -39,7 +39,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "enrollData"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -118,7 +119,7 @@
 					"whenCondition": "WhenTrue",
 					"inRepeatBlock": false,
 					"nodeIcon": "fluent-mdl2:trigger-approval",
-					"flowFileName": "org.gluu.agama.otp.enroll",
+					"flowFileName": "org.gluu.agama.totp.enroll",
 					"arguments": [
 						"userId"
 					],
@@ -291,14 +292,14 @@
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"nodeIcon": "fluent-mdl2:trigger-approval",
-					"flowFileName": "org.gluu.agama.pw",
+					"flowFileName": "org.gluu.agama.totp.pw",
 					"arguments": [],
 					"asssignedVariableName": "user",
 					"exceptionVariableField": "E"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 472,
@@ -568,7 +569,7 @@
 				],
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1960,
@@ -787,8 +788,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1471,
-		"y": -75,
+		"x": -279,
+		"y": -6,
 		"zoom": 1
 	}
 }
