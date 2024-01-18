@@ -13,13 +13,13 @@ checkOTPValid = false
 // if no enrollment exist
 When userTOTPSecretKey is null
      checkOTPValid | E = Trigger org.gluu.agama.totp.enroll userId
-     Log "@info checkOTPValid enroll " checkOTPValid E
+     Log "@info checkOTPValid enroll " checkOTPValid.success E
 // if user is already enrolled
 When userTOTPSecretKey is not null
      checkOTPValid | E = Trigger org.gluu.agama.totp.otp userId userTOTPSecretKey
-     Log "@info checkOTPValid check otp " checkOTPValid E
-When checkOTPValid is true
-     it_fqozm = {success:true, data: { userId: userId }}
-     Finish it_fqozm
-it_wutoi = {success:false, error: "login failed"}
-Finish it_wutoi
+     Log "@info checkOTPValid check otp " checkOTPValid.success E
+When checkOTPValid.success is true
+     it_nfavx = {success:true, data: { userId: userId }}
+     Finish it_nfavx
+it_kkkac = {success:false, error: "login failed"}
+Finish it_kkkac
