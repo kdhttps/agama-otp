@@ -36,7 +36,7 @@ public class IdentityProcessor {
             throw new IOException("Target user for account linking does not exist");
         }
         String extUidPrefixTotpSecretKey = externalIdOf(totpSecretKey)
-        String jansExtUidFieldValue = getSingleValuedAttr(user, extUidPrefixTotpSecretKey);
+        String jansExtUidFieldValue = getSingleValuedAttr(user, EXT_ATTR);
         logger.debug("User ext uid ", jansExtUidFieldValue);
         if (jansExtUidFieldValue == null) {
             logger.debug("User ext uid not found");
@@ -56,7 +56,7 @@ public class IdentityProcessor {
             logger.error("User identified with {} not found!", uid);
             throw new IOException("Target user for account linking does not exist");
         }
-        String jansExtUidFieldValue = getSingleValuedAttr(user, extUidPrefixTotpSecretKey);
+        String jansExtUidFieldValue = getSingleValuedAttr(user, EXT_ATTR);
         logger.debug("User ext uid getUserTOTPSecretKey ", jansExtUidFieldValue);
         return jansExtUidFieldValue
     }
