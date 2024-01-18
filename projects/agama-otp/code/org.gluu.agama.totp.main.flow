@@ -17,4 +17,4 @@ When userTOTPSecretKey is null
 // if user is already enrolled
 When userTOTPSecretKey is not null
      checkOTPValid | E = Trigger org.gluu.agama.totp.otp userId userTOTPSecretKey
-enrollData | E = Call org.gluu.agama.totp.TOTPUtil#validateTOTP otp userTOTPSecretKey
+     Log "@info checkOTPValid check otp " checkOTPValid E
