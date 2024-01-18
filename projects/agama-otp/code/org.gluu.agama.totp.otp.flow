@@ -3,8 +3,6 @@ Flow org.gluu.agama.totp.otp
      Inputs userId
 // otp enrollment
 Log "@info otp enrollment for user " userId
-Log "@info secretKeyUri : " secretKeyUri  E
-obj = { secretKeyUri : secretKeyUri }
 scanCode = RRF "enroll.ftlh" obj
 Log "@info scan code : " scanCode.code
 otpCheck | E = Call org.gluu.agama.totp.TOTPUtil#validateTOTP scanCode.code secretKey
