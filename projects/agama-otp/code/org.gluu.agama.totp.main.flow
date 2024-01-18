@@ -3,7 +3,7 @@ Flow org.gluu.agama.totp.main
 // user authn
 Log "@info user authn"
 // Username password login
-user | E = Trigger org.gluu.agama.pw 
+user | E = Trigger org.gluu.agama.totp.pw 
 Log "@info user details " user
 userId = user.data.userId
 Log "@info user id " userId
@@ -12,6 +12,6 @@ Log "@info user TOTP secret key from flow " userTOTPSecretKey
 enrollData = false
 // if no enrollment exist
 When userTOTPSecretKey is null
-     enrollData | E = Trigger org.gluu.agama.otp.enroll userId
+     enrollData | E = Trigger org.gluu.agama.totp.enroll userId
      Log "@info enroll " enrollData E
 enrollData | E = Call org.gluu.agama.totp.TOTPUtil#validateTOTP otp userTOTPSecretKey
