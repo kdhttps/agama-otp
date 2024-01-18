@@ -9,7 +9,7 @@ userId = user.data.userId
 Log "@info user id " userId
 userTOTPSecretKey | E = Call org.gluu.agama.totp.IdentityProcessor#getUserTOTPSecretKey userId
 Log "@info user TOTP secret key from flow " userTOTPSecretKey
-checkOTPValid = false
+checkOTPValid = null
 // if no enrollment exist
 When userTOTPSecretKey is null
      checkOTPValid | E = Trigger org.gluu.agama.totp.enroll userId
@@ -19,7 +19,7 @@ When userTOTPSecretKey is not null
      checkOTPValid | E = Trigger org.gluu.agama.totp.otp userId userTOTPSecretKey
      Log "@info checkOTPValid check otp " checkOTPValid.success E
 When checkOTPValid.success is true
-     it_nfavx = {success:true, data: { userId: userId }}
-     Finish it_nfavx
-it_kkkac = {success:false, error: "login failed"}
-Finish it_kkkac
+     it_hmhlm = {success:true, data: { userId: userId }}
+     Finish it_hmhlm
+it_lqkcn = {success:false, error: "login failed"}
+Finish it_lqkcn
