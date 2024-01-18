@@ -16,7 +16,7 @@
         ],
         "noDirectLaunch": [
             "org.gluu.agama.otp.enroll",
-            "org.gluu.agama.totp.enroll"
+            "org.gluu.agama.totp.otp"
         ],
         "configs": {
             "org.gluu.agama.totp": {},
@@ -24,7 +24,8 @@
             "org.gluu.agama.otp.enroll": {},
             "": {},
             "org.gluu.agama.totp.enroll": {},
-            "org.gluu.agama.totp.main": {}
+            "org.gluu.agama.totp.main": {},
+            "org.gluu.agama.totp.otp": {}
         },
         "name": "agama-otp"
     }
