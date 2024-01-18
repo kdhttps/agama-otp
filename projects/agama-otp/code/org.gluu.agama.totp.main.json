@@ -36,9 +36,10 @@
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "failed"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 3437,
 				"y": 145
@@ -81,7 +82,8 @@
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "finish success"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -114,7 +116,7 @@
 					"id": "Agama-when-Node-c30bebbf-7ce3-4fa3-9743-cf10643dd99c",
 					"parentId": "Agama-when-Node-1f6a89df-661b-4baa-9419-78e755ba4b12",
 					"type": "Agama-when-Node",
-					"variableField": "checkOTPValid",
+					"variableField": "checkOTPValid.success",
 					"conditionInputField": "is",
 					"valueField": "true",
 					"hasComment": true,
@@ -125,9 +127,10 @@
 				"handles": [
 					"Agama-when-Node-c30bebbf-7ce3-4fa3-9743-cf10643dd99c.FAILURE",
 					"Agama-when-Node-c30bebbf-7ce3-4fa3-9743-cf10643dd99c.SUCCESS"
-				]
+				],
+				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 3111,
 				"y": 197
@@ -162,7 +165,7 @@
 					"comment": "",
 					"whenCondition": "",
 					"inRepeatBlock": "",
-					"logMessage": "\"checkOTPValid check otp \" checkOTPValid E",
+					"logMessage": "\"checkOTPValid check otp \" checkOTPValid.success E",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
@@ -249,7 +252,7 @@
 					"comment": "",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"logMessage": "\"checkOTPValid enroll \" checkOTPValid E",
+					"logMessage": "\"checkOTPValid enroll \" checkOTPValid.success E",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
@@ -1097,8 +1100,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2255,
-		"y": -56,
+		"x": -2261,
+		"y": -111,
 		"zoom": 1
 	}
 }
