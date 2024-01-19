@@ -111,7 +111,7 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "userId",
+					"inputs": "userId qrCodeAlg qrCodeLabel",
 					"configs": "",
 					"flowname": "org.gluu.agama.totp.enroll"
 				},
@@ -252,7 +252,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "{ secretKeyUri : secretKeyUri }",
+							"assignmentExpression": "{ secretKeyUri : secretKeyUri, qrCodeLabel: qrCodeLabel }",
 							"assignedVariableName": "obj"
 						}
 					],
@@ -260,7 +260,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1463,
@@ -351,7 +351,8 @@
 					"inRepeatBlock": "",
 					"arguments": [
 						"scanCode.code",
-						"secretKey"
+						"secretKey",
+						"qrCodeAlg"
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "otpCheck"
@@ -831,8 +832,8 @@
 		}
 	],
 	"viewport": {
-		"x": -5.148424081459098,
-		"y": 104.70335010655651,
-		"zoom": 0.8629214077397802
+		"x": -1146,
+		"y": 45,
+		"zoom": 1
 	}
 }
