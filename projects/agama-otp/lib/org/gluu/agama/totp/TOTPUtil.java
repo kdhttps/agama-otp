@@ -16,8 +16,8 @@ import java.security.NoSuchAlgorithmException;
 
 public class TOTPUtil {
 
-    private static final String DIGITS = 6;
-    private static final String TIME_STEP = 30;
+    private static final int DIGITS = 6;
+    private static final int TIME_STEP = 30;
 
     public TOTPUtil() {
     }
