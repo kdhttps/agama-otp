@@ -7,6 +7,7 @@ import com.lochbridge.oath.otp.TOTP;
 import com.lochbridge.oath.otp.keyprovisioning.OTPAuthURIBuilder;
 import com.lochbridge.oath.otp.keyprovisioning.OTPKey;
 import com.lochbridge.oath.otp.keyprovisioning.OTPKey.OTPType;
+import com.lochbridge.oath.otp.HmacShaAlgorithm;
 import java.util.concurrent.TimeUnit;
 import com.google.common.io.BaseEncoding;
 import javax.crypto.KeyGenerator;
@@ -51,9 +52,19 @@ public class TOTPUtil {
     }
 
     // Method to validate TOTP
-    public static boolean validateTOTP(String clientTOTP, String secretKey) {
+    public static boolean validateTOTP(String clientTOTP, String secretKey, String alg) {
         byte[] key = secretKey.getBytes();
-        TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha1().build();
+        HmacShaAlgorithm algorithm = null
+
+        if (alg.equals('sha1')) {
+            algorithm = HmacShaAlgorithm.HMAC_SHA_1
+        } else if (alg.equals('sha256')) {
+            algorithm = HmacShaAlgorithm.HMAC_SHA_256
+        } else if (alg.equals('sha512')) {
+            algorithm = HmacShaAlgorithm.HMAC_SHA_512
+        }
+
+        TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha(algorithm).build();
         if (totp.value().equals(clientTOTP)) {
             return true
         } else {
