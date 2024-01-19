@@ -171,7 +171,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2886,
@@ -544,7 +544,7 @@
 					"comment": "",
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{}",
+					"configParams": "{\n  \"qrCodeLabel\": \"Gluu\",\n  \"qrCodeAlg\": \"sha256\"\n}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "",
@@ -557,7 +557,7 @@
 				"x": 72,
 				"y": 120
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 72,
 				"y": 120
@@ -1100,8 +1100,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1837.6825447462622,
-		"y": 6.233223235463129,
-		"zoom": 0.8724683680369821
+		"x": 10,
+		"y": 15,
+		"zoom": 1
 	}
 }
