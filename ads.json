@@ -24,7 +24,10 @@
             "org.gluu.agama.otp.enroll": {},
             "": {},
             "org.gluu.agama.totp.enroll": {},
-            "org.gluu.agama.totp.main": {},
+            "org.gluu.agama.totp.main": {
+                "qrCodeLabel": "Gluu",
+                "qrCodeAlg": "sha256"
+            },
             "org.gluu.agama.totp.otp": {}
         },
         "name": "agama-otp"
