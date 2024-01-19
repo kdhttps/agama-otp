@@ -210,14 +210,15 @@
 					"flowFileName": "org.gluu.agama.totp.otp",
 					"arguments": [
 						"userId",
-						"userTOTPSecretKey"
+						"userTOTPSecretKey",
+						"qrCodeAlg"
 					],
 					"asssignedVariableName": "checkOTPValid",
 					"exceptionVariableField": "E"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 2686,
 				"y": 400
@@ -296,7 +297,9 @@
 					"nodeIcon": "fluent-mdl2:trigger-approval",
 					"flowFileName": "org.gluu.agama.totp.enroll",
 					"arguments": [
-						"userId"
+						"userId",
+						"qrCodeAlg",
+						"qrCodeLabel"
 					],
 					"asssignedVariableName": "checkOTPValid",
 					"exceptionVariableField": "E"
@@ -548,7 +551,7 @@
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "",
-					"configs": "",
+					"configs": "conf",
 					"flowname": "org.gluu.agama.totp.main"
 				},
 				"skake": false
@@ -557,7 +560,7 @@
 				"x": 72,
 				"y": 120
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 72,
 				"y": 120
@@ -690,6 +693,16 @@
 							"variableTypeCheck": false,
 							"assignmentExpression": "null",
 							"assignedVariableName": "checkOTPValid"
+						},
+						{
+							"variableTypeCheck": false,
+							"assignmentExpression": "conf.qrCodeAlg",
+							"assignedVariableName": "qrCodeAlg"
+						},
+						{
+							"variableTypeCheck": false,
+							"assignmentExpression": "conf.qrCodeLabel",
+							"assignedVariableName": "qrCodeLabel"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
@@ -1100,8 +1113,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 15,
+		"x": -1699,
+		"y": -97,
 		"zoom": 1
 	}
 }
