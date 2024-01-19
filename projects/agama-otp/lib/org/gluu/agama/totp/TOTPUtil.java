@@ -15,6 +15,9 @@ import java.security.NoSuchAlgorithmException;
 
 public class TOTPUtil {
 
+    private static final String DIGITS = 6;
+    private static final String TIME_STEP = 30;
+
     public TOTPUtil() {
     }
 
@@ -38,25 +41,19 @@ public class TOTPUtil {
 
     // Method to generate TOTP Secret URI
     public static String generateTotpSecretKeyUri(String secretKey, String issuer, String userDisplayName) {
-        int digits = 6;
-        int timeStep = 30;
-
         String secretKeyBase32 = base32Encode(secretKey);
         OTPKey key = new OTPKey(secretKeyBase32, OTPType.TOTP);
         String label = issuer + " " + userDisplayName;
 
-        OTPAuthURI uri = OTPAuthURIBuilder.fromKey(key).label(label).issuer(issuer).digits(digits)
-                .timeStep(TimeUnit.SECONDS.toMillis(timeStep)).build();
+        OTPAuthURI uri = OTPAuthURIBuilder.fromKey(key).label(label).issuer(issuer).digits(DIGITS)
+                .timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).build();
         return uri.toUriString();
     }
 
     // Method to validate TOTP
     public static boolean validateTOTP(String clientTOTP, String secretKey) {
-        int digits = 6;
-        int timeStep = 30;
-
         byte[] key = secretKey.getBytes();
-        TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(timeStep)).digits(digits).hmacSha1().build();
+        TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha1().build();
         if (totp.value().equals(clientTOTP)) {
             return true
         } else {
