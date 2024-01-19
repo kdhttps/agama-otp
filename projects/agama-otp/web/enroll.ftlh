@@ -45,11 +45,65 @@
   
 </body>
 
-<script type="text/javascript" src="qrcode.min.js"></script><script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery-qrcode.min.js"></script>
+
+<script>
+      var QR_CODE_DEFAULT_OPTIONS = {
+        // render method: 'canvas', 'image' or 'div'
+        render: "canvas",
+
+        // version range somewhere in 1 .. 40
+        minVersion: 1,
+        maxVersion: 40,
+
+        // error correction level: 'L', 'M', 'Q' or 'H'
+        ecLevel: "M",
+
+        // offset in pixel if drawn onto existing canvas
+        left: 0,
+        top: 0,
+
+        // size in pixel
+        size: 300,
+
+        // code color or image element
+        fill: "#000",
+
+        // background color or image element, null for transparent background
+        background: null,
+
+        // content
+        text: "${secretKeyUri!}",
+
+        // corner radius relative to module width: 0.0 .. 0.5
+        radius: 0,
+
+        // quiet zone in modules
+        quiet: 0,
+
+        // modes
+        // 0: normal
+        // 1: label strip
+        // 2: label box
+        // 3: image strip
+        // 4: image box
+        mode: 2,
+
+        mSize: 0.1,
+        mPosX: 0.5,
+        mPosY: 0.5,
+
+        label: "${qrCodeLabel!}",
+        fontname: "sans",
+        fontcolor: "#000",
+        image: null,
+      };
+
 	window.onload = function () {
 	  var form = document.querySelector("form");
 	  form.onsubmit = handleFormValidation;
-	  new QRCode(document.getElementById("qrcode"), "${secretKeyUri!}");
+    $("#qrcode").qrcode(options);
 	};
 	function handleFormValidation() {
 	  var code = document.getElementById('code').value
