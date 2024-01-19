@@ -1,5 +1,6 @@
 Flow org.gluu.agama.totp.main
      Basepath ""
+     Configs conf
 // user authn
 Log "@debug user authn"
 // Username password login
@@ -10,16 +11,18 @@ Log "@debug user id " userId
 userTOTPSecretKey | E = Call org.gluu.agama.totp.IdentityProcessor#getUserTOTPSecretKey userId
 Log "@debug user TOTP secret key from flow " userTOTPSecretKey
 checkOTPValid = null
+qrCodeAlg = conf.qrCodeAlg
+qrCodeLabel = conf.qrCodeLabel
 // if no enrollment exist
 When userTOTPSecretKey is null
-     checkOTPValid | E = Trigger org.gluu.agama.totp.enroll userId
+     checkOTPValid | E = Trigger org.gluu.agama.totp.enroll userId qrCodeAlg qrCodeLabel
      Log "@debug checkOTPValid enroll " checkOTPValid.success E
 // if user is already enrolled
 When userTOTPSecretKey is not null
-     checkOTPValid | E = Trigger org.gluu.agama.totp.otp userId userTOTPSecretKey
+     checkOTPValid | E = Trigger org.gluu.agama.totp.otp userId userTOTPSecretKey qrCodeAlg
      Log "@debug checkOTPValid check otp " checkOTPValid.success E
 When checkOTPValid.success is true
-     it_zwvuh = {success:true, data: { userId: userId }}
-     Finish it_zwvuh
-it_pxckt = {success:false, error: "login failed"}
-Finish it_pxckt
+     it_oloez = {success:true, data: { userId: userId }}
+     Finish it_oloez
+it_pcqzk = {success:false, error: "login failed"}
+Finish it_pcqzk
