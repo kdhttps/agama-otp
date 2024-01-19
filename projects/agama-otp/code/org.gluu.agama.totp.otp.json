@@ -111,7 +111,7 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "userId secretKey",
+					"inputs": "userId secretKey qrCodeAlg",
 					"configs": "",
 					"flowname": "org.gluu.agama.totp.otp"
 				},
@@ -212,14 +212,15 @@
 					"inRepeatBlock": "",
 					"arguments": [
 						"scanCode.code",
-						"secretKey"
+						"secretKey",
+						"qrCodeAlg"
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "otpCheck"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 1136,
 				"y": 63
@@ -536,8 +537,8 @@
 		}
 	],
 	"viewport": {
-		"x": -353.7981835357027,
-		"y": 279.45913147644944,
-		"zoom": 0.9286146967410981
+		"x": -499,
+		"y": 94,
+		"zoom": 1
 	}
 }
