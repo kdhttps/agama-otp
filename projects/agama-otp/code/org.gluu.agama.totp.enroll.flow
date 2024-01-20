@@ -5,8 +5,6 @@ Flow org.gluu.agama.totp.enroll
 Log "@debug otp enrollment for user " userId
 // Generate secret key 
 secretKey = Call org.gluu.agama.totp.TOTPUtil#generateSecretKey "AES"
-userSavedData | E = Call org.gluu.agama.totp.IdentityProcessor#link userId secretKey
-Log "@debug user saved data" userSavedData E
 // secret code uri for QR Code
 secretKeyUri | E = Call org.gluu.agama.totp.TOTPUtil#generateTotpSecretKeyUri secretKey "gluu" userId
 Log "@debug secretKeyUri : " secretKeyUri  E
