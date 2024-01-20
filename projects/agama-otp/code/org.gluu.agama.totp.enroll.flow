@@ -15,6 +15,6 @@ otpCheck | E = Call org.gluu.agama.totp.TOTPUtil#validateTOTP scanCode.code secr
 Log "@debug otp check result " otpCheck
 // check otp enrollment is valid?
 When otpCheck is true
-     userSavedData | E = Call org.gluu.agama.totp.IdentityProcessor#org.gluu.agama.totp.IdentityProcessor userId secretKey
+     userSavedData | E = Call org.gluu.agama.totp.IdentityProcessor#link userId secretKey
      Log "@debug user saved data " userSavedData E
 Finish otpCheck
