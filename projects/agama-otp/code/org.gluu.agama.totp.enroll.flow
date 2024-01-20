@@ -13,4 +13,8 @@ scanCode = RRF "enroll.ftlh" obj
 Log "@debug scan code : " scanCode.code
 otpCheck | E = Call org.gluu.agama.totp.TOTPUtil#validateTOTP scanCode.code secretKey qrCodeAlg
 Log "@debug otp check result " otpCheck
+// check otp enrollment is valid?
+When otpCheck is true
+     userSavedData | E = Call org.gluu.agama.totp.IdentityProcessor#org.gluu.agama.totp.IdentityProcessor userId secretKey
+     Log "@debug user saved data " userSavedData E
 Finish otpCheck
