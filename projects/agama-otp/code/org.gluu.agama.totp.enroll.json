@@ -31,9 +31,10 @@
 					"logMessage": "\"user saved data \" userSavedData E",
 					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2638,
@@ -67,7 +68,7 @@
 					"hasComment": true,
 					"comment": "",
 					"javaClassName": "org.gluu.agama.totp.IdentityProcessor",
-					"javaMethodName": "org.gluu.agama.totp.IdentityProcessor",
+					"javaMethodName": "link",
 					"javaVariableName": "",
 					"exceptionVariableField": "E",
 					"callType": "Call static method",
@@ -79,9 +80,10 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "userSavedData"
-				}
+				},
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2438,
@@ -591,7 +593,8 @@
 				"handles": [
 					"Agama-when-Node-075b4409-18d1-47bd-85fe-24b4aefbcc20.FAILURE",
 					"Agama-when-Node-075b4409-18d1-47bd-85fe-24b4aefbcc20.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
