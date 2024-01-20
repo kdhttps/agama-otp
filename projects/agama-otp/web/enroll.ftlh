@@ -21,7 +21,7 @@
 		  </div>
 		  <p class="leading-normal">1. Scan code
 		  </p>
-		  <div id="qrcode" class="w-48 h-48">
+		  <div id="qrcode">
 		  </div>
 		</div>
 		<form method="post" class="my-8">
