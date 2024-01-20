@@ -103,7 +103,7 @@
 	window.onload = function () {
 	  var form = document.querySelector("form");
 	  form.onsubmit = handleFormValidation;
-    $("#qrcode").qrcode(options);
+    $("#qrcode").qrcode(QR_CODE_DEFAULT_OPTIONS);
 	};
 	function handleFormValidation() {
 	  var code = document.getElementById('code').value
