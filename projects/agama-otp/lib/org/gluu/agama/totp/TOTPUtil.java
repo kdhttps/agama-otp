@@ -64,7 +64,7 @@ public class TOTPUtil {
             algorithm = HmacShaAlgorithm.HMAC_SHA_512
         }
 
-        TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha(algorithm).build();
+        TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha1().build();
         if (totp.value().equals(clientTOTP)) {
             return true
         } else {
