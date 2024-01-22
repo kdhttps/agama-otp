@@ -1,6 +1,31 @@
 {
 	"nodes": [
 		{
+			"width": 270,
+			"height": 55,
+			"id": "Agama-note-997449a3-70bf-4ea2-8831-421068e07b27",
+			"position": {
+				"x": 36.33150978085149,
+				"y": 19.076076029787657
+			},
+			"type": "notes",
+			"data": {
+				"id": "Agama-note-997449a3-70bf-4ea2-8831-421068e07b27",
+				"type": "Agama-note",
+				"notes": "This is main flow which handle\n\n1. User authn\n2. User enrollment for TOTP\n3. User OTP validation",
+				"position": {
+					"x": 36.33150978085149,
+					"y": 19.076076029787657
+				}
+			},
+			"selected": false,
+			"positionAbsolute": {
+				"x": 36.33150978085149,
+				"y": 19.076076029787657
+			},
+			"dragging": false
+		},
+		{
 			"width": 170,
 			"height": 124,
 			"id": "finish-f6988b05-6a38-40d3-8ef2-b3512d4b681a",
@@ -318,8 +343,8 @@
 			"height": 124,
 			"id": "Agama-assignment-Node-991ae6f6-437f-45ef-927e-51659e977511",
 			"position": {
-				"x": 872,
-				"y": 120
+				"x": 898.1141316191488,
+				"y": 117.47282597234039
 			},
 			"type": "assignment",
 			"data": {
@@ -329,8 +354,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 872,
-					"y": 120
+					"x": 898.1141316191488,
+					"y": 117.47282597234039
 				},
 				"agamaData": {
 					"id": "Agama-assignment-Node-991ae6f6-437f-45ef-927e-51659e977511",
@@ -359,8 +384,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 872,
-				"y": 120
+				"x": 898.1141316191488,
+				"y": 117.47282597234039
 			}
 		},
 		{
@@ -1082,8 +1107,8 @@
 		}
 	],
 	"viewport": {
-		"x": 37.04012139287224,
-		"y": 41.82934866300792,
+		"x": 193.04012139287232,
+		"y": 66.82934866300792,
 		"zoom": 1.1870967203545995
 	}
 }
