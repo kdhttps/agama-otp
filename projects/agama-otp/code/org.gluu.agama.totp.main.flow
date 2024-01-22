@@ -23,7 +23,7 @@ When userTOTPSecretKey is not null
      checkOTPValid | E = Trigger org.gluu.agama.totp.otp userId userTOTPSecretKey qrCodeAlg
      Log "@debug checkOTPValid check otp " checkOTPValid.success E
 When checkOTPValid.success is true
-     it_gvtkh = {success:true, data: { userId: userId }}
-     Finish it_gvtkh
-it_mduda = {success:false, error: "login failed"}
-Finish it_mduda
+     it_dnvnu = {success:true, data: { userId: userId }}
+     Finish it_dnvnu
+it_ufxiq = {success:false, error: "login failed"}
+Finish it_ufxiq
