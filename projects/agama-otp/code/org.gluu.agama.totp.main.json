@@ -218,7 +218,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 2686,
 				"y": 400
@@ -316,47 +316,6 @@
 		{
 			"width": 170,
 			"height": 124,
-			"id": "Agama-log-Node-2b76cda3-0e65-41ad-936b-0c9b32cf705c",
-			"position": {
-				"x": 1072,
-				"y": 120
-			},
-			"type": "log",
-			"data": {
-				"id": "Agama-log-Node-2b76cda3-0e65-41ad-936b-0c9b32cf705c",
-				"type": "Agama-log-Node",
-				"parentId": "Agama-assignment-Node-991ae6f6-437f-45ef-927e-51659e977511",
-				"whenCondition": "",
-				"inRepeatBlock": false,
-				"position": {
-					"x": 1072,
-					"y": 120
-				},
-				"agamaData": {
-					"id": "Agama-log-Node-2b76cda3-0e65-41ad-936b-0c9b32cf705c",
-					"parentId": "Agama-assignment-Node-991ae6f6-437f-45ef-927e-51659e977511",
-					"type": "Agama-log-Node",
-					"displayName": "userId log",
-					"hasComment": true,
-					"comment": "",
-					"whenCondition": "",
-					"inRepeatBlock": false,
-					"logMessage": "\"user id \" userId",
-					"logLevel": "debug",
-					"nodeIcon": "octicon:log-16"
-				},
-				"skake": false
-			},
-			"selected": false,
-			"dragging": false,
-			"positionAbsolute": {
-				"x": 1072,
-				"y": 120
-			}
-		},
-		{
-			"width": 170,
-			"height": 124,
 			"id": "Agama-assignment-Node-991ae6f6-437f-45ef-927e-51659e977511",
 			"position": {
 				"x": 872,
@@ -389,7 +348,11 @@
 							"assignedVariableName": "userId"
 						}
 					],
-					"nodeIcon": "material-symbols:equal"
+					"nodeIcon": "material-symbols:equal",
+					"hasSuccess": "",
+					"hasFailure": "",
+					"hasNoRepeat": false,
+					"hasRepeat": false
 				},
 				"skake": false
 			},
@@ -425,10 +388,10 @@
 					"type": "Agama-log-Node",
 					"displayName": "log user",
 					"hasComment": true,
-					"comment": "",
+					"comment": "log authenticated user",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"logMessage": "\"user details \" user",
+					"logMessage": "\"Authn user details \" user",
 					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16"
 				},
@@ -509,10 +472,10 @@
 					"type": "Agama-log-Node",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "user authn",
+					"comment": "Log Proceeding for user authn",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"logMessage": "\"user authn\"",
+					"logMessage": "\"proceeding for user authn\"",
 					"logLevel": "debug",
 					"nodeIcon": "octicon:log-16"
 				},
@@ -542,9 +505,9 @@
 				"agamaData": {
 					"id": "Agama-start-Flow-5e5f716c-d68a-48fe-9ab3-ce1d4292176e",
 					"type": "Agama-start-Flow",
-					"displayName": "gluu agama totp",
+					"displayName": "Gluu Agama TOTP Auth",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Main flow to handle all sub flows",
 					"isTopLevelFlow": true,
 					"basepath": "",
 					"configParams": "{\n  \"qrCodeLabel\": \"Gluu\",\n  \"qrCodeAlg\": \"sha256\"\n}",
@@ -572,23 +535,23 @@
 			"height": 124,
 			"id": "Agama-call-Node-c9f0bffa-db46-4080-8661-c51de76a3ef5",
 			"position": {
-				"x": 1298,
+				"x": 1148,
 				"y": 120
 			},
 			"type": "call",
 			"data": {
 				"id": "Agama-call-Node-c9f0bffa-db46-4080-8661-c51de76a3ef5",
 				"type": "Agama-call-Node",
-				"parentId": "Agama-log-Node-2b76cda3-0e65-41ad-936b-0c9b32cf705c",
+				"parentId": "Agama-assignment-Node-991ae6f6-437f-45ef-927e-51659e977511",
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 1298,
+					"x": 1148,
 					"y": 120
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-c9f0bffa-db46-4080-8661-c51de76a3ef5",
-					"parentId": "Agama-log-Node-2b76cda3-0e65-41ad-936b-0c9b32cf705c",
+					"parentId": "Agama-assignment-Node-991ae6f6-437f-45ef-927e-51659e977511",
 					"type": "Agama-call-Node",
 					"displayName": "Get User TOTP Secret key",
 					"hasComment": true,
@@ -610,7 +573,7 @@
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 1298,
+				"x": 1148,
 				"y": 120
 			},
 			"dragging": false
@@ -620,7 +583,7 @@
 			"height": 124,
 			"id": "Agama-log-Node-9e877173-94de-48c1-a807-cde1025de181",
 			"position": {
-				"x": 1522,
+				"x": 1372,
 				"y": 187
 			},
 			"type": "log",
@@ -631,7 +594,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 1522,
+					"x": 1372,
 					"y": 187
 				},
 				"agamaData": {
@@ -655,7 +618,7 @@
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 1522,
+				"x": 1372,
 				"y": 187
 			},
 			"dragging": false
@@ -665,7 +628,7 @@
 			"height": 124,
 			"id": "Agama-assignment-Node-8fd47c3f-713f-44bd-a54e-23a8c291d312",
 			"position": {
-				"x": 1755,
+				"x": 1605,
 				"y": 168
 			},
 			"type": "assignment",
@@ -676,7 +639,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 1755,
+					"x": 1605,
 					"y": 168
 				},
 				"agamaData": {
@@ -711,7 +674,7 @@
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 1755,
+				"x": 1605,
 				"y": 168
 			},
 			"dragging": false
@@ -721,7 +684,7 @@
 			"height": 140,
 			"id": "Agama-when-Node-4fa47f26-e1e3-4d4f-b40d-31de2ff74da4",
 			"position": {
-				"x": 1993,
+				"x": 1843,
 				"y": 185
 			},
 			"parentId": "Agama-assignment-Node-8fd47c3f-713f-44bd-a54e-23a8c291d312",
@@ -733,7 +696,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": "",
 				"position": {
-					"x": 1993,
+					"x": 1843,
 					"y": 185
 				},
 				"agamaData": {
@@ -760,7 +723,7 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 1993,
+				"x": 1843,
 				"y": 185
 			},
 			"whenCondition": "",
@@ -1110,11 +1073,17 @@
 				"fillOpacity": 0.7
 			},
 			"sourceHandle": "Agama-when-Node-c30bebbf-7ce3-4fa3-9743-cf10643dd99c.FAILURE"
+		},
+		{
+			"id": "Agama-assignment-Node-991ae6f6-437f-45ef-927e-51659e977511-Agama-call-Node-c9f0bffa-db46-4080-8661-c51de76a3ef5-5d603ebb-8e69-4804-bdf0-b44942a91cc4",
+			"type": "straight",
+			"source": "Agama-assignment-Node-991ae6f6-437f-45ef-927e-51659e977511",
+			"target": "Agama-call-Node-c9f0bffa-db46-4080-8661-c51de76a3ef5"
 		}
 	],
 	"viewport": {
-		"x": -1699,
-		"y": -97,
-		"zoom": 1
+		"x": 37.04012139287224,
+		"y": 41.82934866300792,
+		"zoom": 1.1870967203545995
 	}
 }
