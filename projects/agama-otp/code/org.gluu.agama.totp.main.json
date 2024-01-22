@@ -16,7 +16,8 @@
 				"position": {
 					"x": 36.33150978085149,
 					"y": 19.076076029787657
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
