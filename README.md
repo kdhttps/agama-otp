@@ -65,3 +65,16 @@ rp->>browser: Page is accessed
 # License
 
 This project is licensed under the [Apache 2.0](https://github.com/kdhttps/agama-otp/blob/main/LICENSE)
+
+<!-- This are stats url reference for this repository -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/kdhttps/agama-otp.svg?style=for-the-badge
+[contributors-url]: https://github.com/kdhttps/agama-otp/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kdhttps/agama-otp.svg?style=for-the-badge
+[forks-url]: https://github.com/kdhttps/agama-otp/network/members
+[stars-shield]: https://img.shields.io/github/stars/kdhttps/agama-otp?style=for-the-badge
+[stars-url]: https://github.com/kdhttps/agama-otp/stargazers
+[issues-shield]: https://img.shields.io/github/issues/kdhttps/agama-otp.svg?style=for-the-badge
+[issues-url]: https://github.com/kdhttps/agama-otp/issues
+[license-shield]: https://img.shields.io/github/license/kdhttps/agama-otp.svg?style=for-the-badge
+[license-url]: https://github.com/kdhttps/agama-otp/blob/main/LICENSE
