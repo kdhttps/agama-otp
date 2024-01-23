@@ -1,4 +1,12 @@
-# Agama TOTP Project
+[![Contributors][contributors-shield]](contributors-url)
+[![Forks][forks-shield]](forks-url)
+[![Stargazers][stars-shield]](stars-url)
+[![Issues][issues-shield]](issues-url)
+[![Apache License][license-shield]](license-url)
+
+# Gluu Agama TOTP Project
+
+Welcome to the [https://github.com/kdhttps/agama-otp](https://github.com/kdhttps/agama-otp) project. This project is governed by Gluu and published under an Apache 2.0 license. It provides various flows to password authenticate a person.
 
 Use this project to add user authentication with OTOP(Time-based One-time Passwords) 2-factor authentication.
 
@@ -39,3 +47,21 @@ jans->>rp: Redirect with Success response
 rp->>rp: Validate response
 rp->>browser: Page is accessed
 ```
+
+# Core Developers
+
+<table>
+ <tr>
+  <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+    <a href=https://github.com/kdhttps>
+        <img src="https://avatars.githubusercontent.com/u/39133739?v=4" width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt="Kiran Mali">
+        <br />
+        <sub style="font-size:14px"><b>Kiran Mali</b></sub>
+    </a>
+  </td>
+ </tr>
+</table>
+
+# License
+
+This project is licensed under the [Apache 2.0](https://github.com/kdhttps/agama-otp/blob/main/LICENSE)
