@@ -17,13 +17,13 @@ qrCodeLabel = conf.qrCodeLabel
 // if no enrollment exist
 When userTOTPSecretKey is null
      checkOTPValid | E = Trigger org.gluu.agama.totp.enroll userId qrCodeAlg qrCodeLabel
-     Log "@debug checkOTPValid enroll " checkOTPValid.success E
+     Log "@debug checkOTPValid enroll " checkOTPValid E
 // if user is already enrolled
 When userTOTPSecretKey is not null
      checkOTPValid | E = Trigger org.gluu.agama.totp.otp userId userTOTPSecretKey qrCodeAlg
-     Log "@debug checkOTPValid check otp " checkOTPValid.success E
+     Log "@debug checkOTPValid check otp " checkOTPValid E
 When checkOTPValid.success is true
-     it_dnvnu = {success:true, data: { userId: userId }}
-     Finish it_dnvnu
-it_ufxiq = {success:false, error: "login failed"}
-Finish it_ufxiq
+     it_rsxri = {success:true, data: { userId: userId }}
+     Finish it_rsxri
+it_xdgqz = {success:false, error: "login failed"}
+Finish it_xdgqz
