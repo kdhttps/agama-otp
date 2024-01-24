@@ -37,6 +37,7 @@ public class TOTPUtil {
         } else {
             logger.error("generateSecretKey. Invalid Alg", alg);
         }
+        logger.debug("generateSecretKey. algorithm ", algorithm);
         KeyGenerator keyGenerator = KeyGenerator.getInstance(algorithm);
 
         SecureRandom secureRandom = new SecureRandom();
@@ -78,7 +79,7 @@ public class TOTPUtil {
         } else {
             logger.error("validateTOTP. Invalid Alg", alg);
         }
-
+        logger.debug("genervalidateTOTPateSecretKey. algorithm ", algorithm);
         TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha(algorithm).build();
         if (totp.value().equals(clientTOTP)) {
             return true
