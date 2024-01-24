@@ -23,16 +23,16 @@ public class TOTPUtil {
     }
 
     // Method to generate a secret key using SecureRandom
-    public static String generateSecretKey(String algorithm) throws NoSuchAlgorithmException {
-        String keyGeneratorAlgorithm = ''
-        if (algorithm.equals('sha1')) {
+    public static String generateSecretKey(String alg) throws NoSuchAlgorithmException {
+        String algorithm = ''
+        if (alg.equals('sha1')) {
             keyGeneratorAlgorithm = 'HmacSHA1'
         } else if (alg.equals('sha256')) {
             keyGeneratorAlgorithm = 'HmacSHA256'
         } else if (alg.equals('sha512')) {
             keyGeneratorAlgorithm = 'HmacSHA512'
         }
-        KeyGenerator keyGenerator = KeyGenerator.getInstance(keyGeneratorAlgorithm);
+        KeyGenerator keyGenerator = KeyGenerator.getInstance(algorithm);
 
         SecureRandom secureRandom = new SecureRandom();
         keyGenerator.init(secureRandom);
