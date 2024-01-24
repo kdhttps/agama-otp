@@ -292,7 +292,9 @@
 					"callType": "Call static method",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"arguments": "\"AES\"",
+					"arguments": [
+						"qrCodeAlg"
+					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "secretKey",
 					"position": {
@@ -305,7 +307,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 473,
@@ -494,7 +496,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2096,
@@ -947,8 +949,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1434,
-		"y": 166,
+		"x": -10,
+		"y": 63,
 		"zoom": 1
 	}
 }
