@@ -81,6 +81,9 @@ public class TOTPUtil {
         }
         logger.debug("genervalidateTOTPateSecretKey. algorithm ", algorithm);
         TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha(algorithm).build();
+        logger.debug("genervalidateTOTPateSecretKey. clientTOTP ", clientTOTP);
+        logger.debug("genervalidateTOTPateSecretKey. totp ", totp.value());
+        
         if (totp.value().equals(clientTOTP)) {
             return true
         } else {
