@@ -29,9 +29,9 @@ public class TOTPUtil {
     public static String generateSecretKey(String alg) throws NoSuchAlgorithmException {
         String algorithm = ''
         if (alg.equals('sha1')) {
-            algorithm = 'AES'
+            algorithm = 'HmacSHA1'
         } else if (alg.equals('sha256')) {
-            algorithm = 'AES_256'
+            algorithm = 'HmacSHA256'
         } else if (alg.equals('sha512')) {
             algorithm = 'HmacSHA512'
         } else {
