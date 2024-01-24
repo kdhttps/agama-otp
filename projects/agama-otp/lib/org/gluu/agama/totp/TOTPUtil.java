@@ -35,7 +35,7 @@ public class TOTPUtil {
         } else if (alg.equals('sha512')) {
             algorithm = 'HmacSHA512'
         } else {
-            logger.error("generateSecretKey. Invalid Alg", alg);
+            logger.error("generateSecretKey. Invalid Alg", algorithm);
         }
         KeyGenerator keyGenerator = KeyGenerator.getInstance(algorithm);
 
