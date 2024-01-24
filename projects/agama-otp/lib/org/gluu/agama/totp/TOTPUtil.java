@@ -13,9 +13,12 @@ import com.google.common.io.BaseEncoding;
 import javax.crypto.KeyGenerator;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class TOTPUtil {
 
+    private static final Logger logger = LoggerFactory.getLogger(TOTPUtil.class);
     private static final int DIGITS = 6;
     private static final int TIME_STEP = 30;
 
@@ -31,6 +34,8 @@ public class TOTPUtil {
             algorithm = 'HmacSHA256'
         } else if (alg.equals('sha512')) {
             algorithm = 'HmacSHA512'
+        } else {
+            logger.error("generateSecretKey. Invalid Alg", alg);
         }
         KeyGenerator keyGenerator = KeyGenerator.getInstance(algorithm);
 
@@ -70,6 +75,8 @@ public class TOTPUtil {
             algorithm = HmacShaAlgorithm.HMAC_SHA_256
         } else if (alg.equals('sha512')) {
             algorithm = HmacShaAlgorithm.HMAC_SHA_512
+        } else {
+            logger.error("validateTOTP. Invalid Alg", alg);
         }
 
         TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha(algorithm).build();
