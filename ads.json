@@ -25,7 +25,8 @@
             "org.gluu.agama.totp.enroll": {},
             "org.gluu.agama.totp.main": {
                 "qrCodeLabel": "Gluu",
-                "qrCodeAlg": "sha256"
+                "qrCodeAlg": "sha256",
+                "qrCodeKeyLength": 20
             },
             "org.gluu.agama.totp.otp": {}
         },
