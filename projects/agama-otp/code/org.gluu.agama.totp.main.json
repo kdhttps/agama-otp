@@ -5,8 +5,8 @@
 			"height": 55,
 			"id": "Agama-note-997449a3-70bf-4ea2-8831-421068e07b27",
 			"position": {
-				"x": 36.33150978085149,
-				"y": 19.076076029787657
+				"x": 33.33150978085155,
+				"y": -16.923923970212343
 			},
 			"type": "notes",
 			"data": {
@@ -14,15 +14,15 @@
 				"type": "Agama-note",
 				"notes": "This is main flow which handle\n\n1. User authn\n2. User enrollment for TOTP\n3. User OTP validation",
 				"position": {
-					"x": 36.33150978085149,
-					"y": 19.076076029787657
+					"x": 33.33150978085155,
+					"y": -16.923923970212343
 				},
 				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 36.33150978085149,
-				"y": 19.076076029787657
+				"x": 33.33150978085155,
+				"y": -16.923923970212343
 			},
 			"dragging": false
 		},
@@ -1114,8 +1114,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 15,
+		"x": 18,
+		"y": 110,
 		"zoom": 1
 	}
 }
