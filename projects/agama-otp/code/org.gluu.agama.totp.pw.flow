@@ -1,4 +1,4 @@
-Flow org.gluu.agama.totp.pw
+Flow org.gluu.agama.pw
      Basepath ""
 Log "@info init objects"
 // initialize auth server
@@ -17,7 +17,7 @@ Repeat 3 times max
      authResult.uid = creds.username
      // authResult.success is true
      When authResult.success is true
-          it_eibnn = {success:true, data: {userId: authResult.uid}}
-          Finish it_eibnn
-it_eldkh = {success:false, error: "false"}
-Finish it_eldkh
+          it_kyago = {success:true, data: {userId: authResult.uid}}
+          Finish it_kyago
+it_fflbb = {success:false, error: "false"}
+Finish it_fflbb
