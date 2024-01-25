@@ -106,7 +106,7 @@
 					"displayName": "gluu agama otp enroll",
 					"hasComment": true,
 					"comment": "",
-					"isTopLevelFlow": false,
+					"isTopLevelFlow": true,
 					"basepath": "",
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
@@ -121,7 +121,7 @@
 				"x": 73,
 				"y": 76
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 73,
 				"y": 76
@@ -220,7 +220,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 1136,
 				"y": 63
@@ -537,8 +537,8 @@
 		}
 	],
 	"viewport": {
-		"x": -499,
-		"y": 94,
+		"x": 10,
+		"y": 15,
 		"zoom": 1
 	}
 }
