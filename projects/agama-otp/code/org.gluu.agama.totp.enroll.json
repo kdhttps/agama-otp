@@ -201,7 +201,7 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "userId qrCodeAlg qrCodeLabel",
+					"inputs": "userId qrCodeAlg qrCodeKeyLength qrCodeLabel",
 					"configs": "",
 					"flowname": "org.gluu.agama.totp.enroll"
 				},
@@ -293,7 +293,7 @@
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"arguments": [
-						"qrCodeAlg"
+						"qrCodeKeyLength"
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "secretKey",
@@ -949,8 +949,8 @@
 		}
 	],
 	"viewport": {
-		"x": -10,
-		"y": 63,
+		"x": 10,
+		"y": 15,
 		"zoom": 1
 	}
 }
