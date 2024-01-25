@@ -26,18 +26,7 @@ public class TOTPUtil {
     }
 
     // Method to generate a secret key using SecureRandom
-    public static String generateSecretKey(String alg) throws NoSuchAlgorithmException {
-        int keyLen = 0
-        if (alg.equals('sha1')) {
-            keyLen = 20
-        } else if (alg.equals('sha256')) {
-            keyLen = 32
-        } else if (alg.equals('sha512')) {
-            keyLen = 64
-        } else {
-            logger.error("generateSecretKey. Invalid Alg", alg);
-        }
-        logger.debug("generateSecretKey. keyLen ", keyLen);
+    public static String generateSecretKey(int keyLen) throws NoSuchAlgorithmException {
         byte[] randomBytes = new byte[keyLen];
         SecureRandom secureRandom = new SecureRandom();
         secureRandom.nextBytes(randomBytes);
@@ -63,22 +52,12 @@ public class TOTPUtil {
     // Method to validate TOTP
     public static boolean validateTOTP(String clientTOTP, String secretKey, String alg) {
         byte[] key = secretKey.getBytes();
-        HmacShaAlgorithm algorithm = null
-
-        if (alg.equals('sha1')) {
-            algorithm = HmacShaAlgorithm.HMAC_SHA_1
-        } else if (alg.equals('sha256')) {
-            algorithm = HmacShaAlgorithm.HMAC_SHA_256
-        } else if (alg.equals('sha512')) {
-            algorithm = HmacShaAlgorithm.HMAC_SHA_512
-        } else {
-            logger.error("validateTOTP. Invalid Alg", alg);
-        }
+        HmacShaAlgorithm algorithm = HmacShaAlgorithm.from("Hmac" + alg.toUpperCase());
 
         logger.debug("validateTOTP. algorithm ", algorithm);
-        TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha(HmacShaAlgorithm.HMAC_SHA_1).build();
-        logger.debug("validateTOTP. clientTOTP ", clientTOTP);
-        logger.debug("validateTOTP. totp ", totp.value());
+        TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha(algorithm).build();
+        logger.debug("validateTOTP. client OTP ", clientTOTP);
+        logger.debug("validateTOTP. totp OTP ", totp.value());
         
         if (totp.value().equals(clientTOTP)) {
             return true
