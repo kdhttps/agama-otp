@@ -26,29 +26,14 @@ public class TOTPUtil {
     }
 
     // Method to generate a secret key using SecureRandom
-    public static String generateSecretKey(String alg) throws NoSuchAlgorithmException {
-        String algorithm = ''
-        if (alg.equals('sha1')) {
-            algorithm = 'HmacSHA1'
-        } else if (alg.equals('sha256')) {
-            algorithm = 'HmacSHA256'
-        } else if (alg.equals('sha512')) {
-            algorithm = 'HmacSHA512'
-        } else {
-            logger.error("generateSecretKey. Invalid Alg", alg);
-        }
-        logger.debug("generateSecretKey. algorithm ", algorithm);
-        KeyGenerator keyGenerator = KeyGenerator.getInstance(algorithm);
-
+    public static String generateSecretKey(int keyLen) throws NoSuchAlgorithmException {
+        logger.debug("generateSecretKey. keyLen ", keyLen);
+        byte[] randomBytes = new byte[keyLen];
         SecureRandom secureRandom = new SecureRandom();
-        keyGenerator.init(secureRandom);
+        secureRandom.nextBytes(randomBytes);
 
-        Key secretKey = keyGenerator.generateKey();
-
-        // Helper method to convert byte array to hexadecimal string
-        byte[] bytes = secretKey.getEncoded();
         StringBuilder result = new StringBuilder();
-        for (byte b : bytes) {
+        for (byte b : randomBytes) {
             result.append(String.format("%02X", b));
         }
         return result.toString();
@@ -79,6 +64,7 @@ public class TOTPUtil {
         } else {
             logger.error("validateTOTP. Invalid Alg", alg);
         }
+
         logger.debug("genervalidateTOTPateSecretKey. algorithm ", algorithm);
         TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha(algorithm).build();
         logger.debug("genervalidateTOTPateSecretKey. clientTOTP ", clientTOTP);
