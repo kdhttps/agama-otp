@@ -333,7 +333,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2146,
@@ -537,7 +537,7 @@
 					"comment": "Main flow to handle all sub flows",
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{\n  \"qrCodeLabel\": \"Gluu\",\n  \"qrCodeAlg\": \"sha256\",\n  \"qrCodeKeyLength\": 20\n}",
+					"configParams": "{\n  \"qrCodeLabel\": \"Gluu\",\n  \"qrCodeAlg\": \"sha1\",\n  \"qrCodeKeyLength\": 20\n}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "",
@@ -550,7 +550,7 @@
 				"x": 72,
 				"y": 120
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 72,
 				"y": 120
@@ -1114,8 +1114,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1943,
-		"y": -77,
+		"x": 10,
+		"y": 15,
 		"zoom": 1
 	}
 }
