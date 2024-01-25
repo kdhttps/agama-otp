@@ -873,7 +873,7 @@
 					"exceptionVariableField": "",
 					"hasExtraData": false,
 					"configParams": "{}",
-					"flowname": "org.gluu.agama.pw",
+					"flowname": "org.gluu.agama.totp.pw",
 					"timeout": "",
 					"inputs": ""
 				},

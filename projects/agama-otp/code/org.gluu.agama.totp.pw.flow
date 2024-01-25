@@ -1,4 +1,4 @@
-Flow org.gluu.agama.pw
+Flow org.gluu.agama.totp.pw
      Basepath ""
 Log "@info init objects"
 // initialize auth server
