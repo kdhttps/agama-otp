@@ -26,7 +26,17 @@ public class TOTPUtil {
     }
 
     // Method to generate a secret key using SecureRandom
-    public static String generateSecretKey(int keyLen) throws NoSuchAlgorithmException {
+    public static String generateSecretKey(String alg) throws NoSuchAlgorithmException {
+        int keyLen = 0
+        if (alg.equals('sha1')) {
+            keyLen = 20
+        } else if (alg.equals('sha256')) {
+            keyLen = 32
+        } else if (alg.equals('sha512')) {
+            keyLen = 64
+        } else {
+            logger.error("generateSecretKey. Invalid Alg", alg);
+        }
         logger.debug("generateSecretKey. keyLen ", keyLen);
         byte[] randomBytes = new byte[keyLen];
         SecureRandom secureRandom = new SecureRandom();
