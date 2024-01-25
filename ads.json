@@ -15,7 +15,6 @@
             "agama"
         ],
         "noDirectLaunch": [
-            "org.gluu.agama.otp.enroll",
             "org.gluu.agama.totp.enroll"
         ],
         "configs": {
