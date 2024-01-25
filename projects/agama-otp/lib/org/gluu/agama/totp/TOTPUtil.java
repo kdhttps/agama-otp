@@ -75,10 +75,10 @@ public class TOTPUtil {
             logger.error("validateTOTP. Invalid Alg", alg);
         }
 
-        logger.debug("genervalidateTOTPateSecretKey. algorithm ", algorithm);
-        TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha(algorithm).build();
-        logger.debug("genervalidateTOTPateSecretKey. clientTOTP ", clientTOTP);
-        logger.debug("genervalidateTOTPateSecretKey. totp ", totp.value());
+        logger.debug("validateTOTP. algorithm ", algorithm);
+        TOTP totp = TOTP.key(key).timeStep(TimeUnit.SECONDS.toMillis(TIME_STEP)).digits(DIGITS).hmacSha(HmacShaAlgorithm.HMAC_SHA_1).build();
+        logger.debug("validateTOTP. clientTOTP ", clientTOTP);
+        logger.debug("validateTOTP. totp ", totp.value());
         
         if (totp.value().equals(clientTOTP)) {
             return true
