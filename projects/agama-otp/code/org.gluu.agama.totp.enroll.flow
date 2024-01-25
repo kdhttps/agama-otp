@@ -1,10 +1,10 @@
 Flow org.gluu.agama.totp.enroll
      Basepath ""
-     Inputs userId qrCodeAlg qrCodeLabel
+     Inputs userId qrCodeAlg qrCodeKeyLength qrCodeLabel
 // otp enrollment
 Log "@debug otp enrollment for user " userId
 // Generate secret key 
-secretKey = Call org.gluu.agama.totp.TOTPUtil#generateSecretKey qrCodeAlg
+secretKey = Call org.gluu.agama.totp.TOTPUtil#generateSecretKey qrCodeKeyLength
 // secret code uri for QR Code
 secretKeyUri | E = Call org.gluu.agama.totp.TOTPUtil#generateTotpSecretKeyUri secretKey "gluu" userId
 Log "@debug secretKeyUri : " secretKeyUri  E
