@@ -8,7 +8,7 @@
 
 # Gluu Agama TOTP Project
 
-Welcome to the [https://github.com/kdhttps/agama-otp](https://github.com/kdhttps/agama-otp) project. This project is governed by Gluu and published under an Apache 2.0 license. It provides various flows to password authenticate a person.
+Welcome to the [https://github.com/kdhttps/agama-otp](https://github.com/kdhttps/agama-otp) project. This project is governed by Gluu and published under an Apache 2.0 license.
 
 Use this project to add user authentication with OTOP(Time-based One-time Passwords) 2-factor authentication.
 
