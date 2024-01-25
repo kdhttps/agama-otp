@@ -19,9 +19,7 @@
             "org.gluu.agama.totp.enroll"
         ],
         "configs": {
-            "org.gluu.agama.totp": {},
-            "org.gluu.agama.pw": {},
-            "org.gluu.agama.otp.enroll": {},
+            "org.gluu.agama.totp.pw": {},
             "org.gluu.agama.totp.enroll": {},
             "org.gluu.agama.totp.main": {
                 "qrCodeLabel": "Gluu",
