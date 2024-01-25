@@ -17,7 +17,7 @@ Repeat 3 times max
      authResult.uid = creds.username
      // authResult.success is true
      When authResult.success is true
-          it_kyago = {success:true, data: {userId: authResult.uid}}
-          Finish it_kyago
-it_fflbb = {success:false, error: "false"}
-Finish it_fflbb
+          it_gmszq = {success:true, data: {userId: authResult.uid}}
+          Finish it_gmszq
+it_uvlmd = {success:false, error: "false"}
+Finish it_uvlmd
