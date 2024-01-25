@@ -325,6 +325,7 @@
 					"arguments": [
 						"userId",
 						"qrCodeAlg",
+						"qrCodeKeyLength",
 						"qrCodeLabel"
 					],
 					"asssignedVariableName": "checkOTPValid",
@@ -332,7 +333,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2146,
@@ -536,7 +537,7 @@
 					"comment": "Main flow to handle all sub flows",
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{\n  \"qrCodeLabel\": \"Gluu\",\n  \"qrCodeAlg\": \"sha256\"\n}",
+					"configParams": "{\n  \"qrCodeLabel\": \"Gluu\",\n  \"qrCodeAlg\": \"sha256\",\n  \"qrCodeKeyLength\": 20\n}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "",
@@ -692,6 +693,11 @@
 							"variableTypeCheck": false,
 							"assignmentExpression": "conf.qrCodeLabel",
 							"assignedVariableName": "qrCodeLabel"
+						},
+						{
+							"variableTypeCheck": false,
+							"assignmentExpression": "conf.qrCodeKeyLength",
+							"assignedVariableName": "qrCodeKeyLength"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
@@ -1108,8 +1114,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2412,
-		"y": -135,
+		"x": -1943,
+		"y": -77,
 		"zoom": 1
 	}
 }
